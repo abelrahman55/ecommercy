@@ -1,0 +1,41 @@
+<nav class="cont">
+  <h1 class="logo" routerLink="/">E-com</h1>
+  <form
+  (ngSubmit)="searchproducts(searchinput.value)"
+  >
+    <input
+    #searchinput
+    type="text"
+    (keyup)="search($event)"
+    (blur)="bluresearch()"
+    placeholder="searche here"
+    >
+    <button>search</button>
+  </form>
+  <ul class="suggested-search" *ngIf="searchedproduct">
+    <li *ngFor="let item of searchedproduct">
+      <a (mousedown)="redirectToDetails(item.id)" >{{item.name}}</a>
+    </li>
+  </ul>
+  <div [ngSwitch]="menutype">
+    <div class="links" *ngSwitchCase="'default'">
+      <h3 routerLink="/seller-auth">seller</h3>
+      <h3 routerLink="/">home</h3>
+      <h3 routerLink="/cart">cart({{cartdatalength}})</h3>
+      <h3 routerLink="/user-auth">login/signup</h3>
+    </div>
+    <div class="links" *ngSwitchCase="'seller'">
+      <h3 routerLink="/seller-add-product">add products</h3>
+      <h3 routerLink="/seller-home">list</h3>
+      <h3 (click)="sellerlogout()">logout</h3>
+      <h3>{{sellername}}</h3>
+    </div>
+    <div class="links" *ngSwitchCase="'user'">
+      <h3 routerLink="/seller-home">seller</h3>
+      <h3 routerLink="/seller-add-product">home</h3>
+      <h3 (click)="userlogout()">logout</h3>
+      <h3>{{username}}</h3>
+      <h3 routerLink="/cart">cart({{cartdatalength}})</h3>
+    </div>
+  </div>
+</nav>

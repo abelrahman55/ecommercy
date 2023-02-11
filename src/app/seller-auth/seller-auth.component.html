@@ -1,0 +1,22 @@
+<div class="seller-auth">
+  <div *ngIf="!logsignstatus" class="signup">
+    <h1>seller sign up</h1>
+    <form (ngSubmit)="signup(sellerform.value)" [formGroup]="sellerform">
+      <input type="text" formControlName="name" placeholder="enter your name">
+      <input type="email" formControlName="email" placeholder="enter your email">
+      <input type="password" formControlName="password" placeholder="enter your password">
+      <button>sign up</button>
+    </form>
+    <a (click)="changelogsign()" class="logsign">allready have acount?click for login</a>
+  </div>
+  <div *ngIf="logsignstatus" class="signup">
+    <h1>seller log in</h1>
+    <p class="loginerror">{{loginerrormsg}}</p>
+    <form (ngSubmit)="login(sellerform.value)" [formGroup]="sellerform">
+      <input type="email" formControlName="email" placeholder="enter your email">
+      <input type="password" formControlName="password" placeholder="enter your password">
+      <button>log in</button>
+    </form>
+    <a (click)="changelogsign()" class="logsign">don not have account? click for sign up</a>
+  </div>
+</div>

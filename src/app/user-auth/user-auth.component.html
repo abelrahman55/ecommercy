@@ -1,0 +1,46 @@
+<div class="user-auth">
+  <div *ngIf="!logsign" class="signup" >
+    <h1>user signup</h1>
+    <form
+    class="common-form"
+    [formGroup]="userform"
+    (ngSubmit)="signup(userform.value)"
+    >
+      <input type="text" placeholder="enter user name" formControlName="name" />
+      <input
+        type="text"
+        placeholder="enter user email"
+        formControlName="email"
+      />
+      <input
+        type="text"
+        placeholder="enter user password"
+        formControlName="password"
+      />
+      <button>submit</button>
+    </form>
+    <a (click)="changelogsign()"  class="logsign"
+      >are you have an account ?click here to login</a
+    >
+  </div>
+  <div *ngIf="logsign"  class="login">
+    <h1>user log in</h1>
+    <p class="loginerror">{{loginerrormsg}}</p>
+    <form (ngSubmit)="login(userform.value)" class="common-form" [formGroup]="userform">
+      <input
+        type="text"
+        placeholder="enter user email"
+        formControlName="email"
+      />
+      <input
+        type="text"
+        placeholder="enter user password"
+        formControlName="password"
+      />
+      <button>submit</button>
+    </form>
+    <a (click)="changelogsign()" class="logsign"
+      >are you have not an account ?click here to signup</a
+    >
+  </div>
+</div>

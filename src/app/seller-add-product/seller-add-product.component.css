@@ -1,0 +1,32 @@
+.seller-add-product >h1{
+  text-transform: uppercase;
+  margin: 50px 0px;
+  text-align: center;
+  font-family: serif;
+}
+.seller-add-product form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.seller-add-product form input,textarea,button{
+  width: 70%;
+  height: 45px;
+  outline: none;
+}
+textarea{
+  height: 80px;
+}
+button{
+  background-color: orangered;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  font-size: 1.4rem;
+}
+.messageadd{
+  color: green;
+  text-transform: capitalize;
+  text-align: center;
+}

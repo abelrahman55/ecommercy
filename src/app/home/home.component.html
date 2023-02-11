@@ -1,0 +1,29 @@
+<div class="home">
+  <h1>trenfy product</h1>
+  <div class="row">
+    <div class="col-sm-6 col-md-4 col-lg-4" *ngFor="let item of trendyproducts">
+      <div class="product-item">
+        <img src={{item.image}} alt="">
+        <div class="product-details">
+          <h6 class="name-head">{{item.name}}</h6>
+          <div class="product-price">
+            <h6>price:{{item.price}}</h6>
+          </div>
+          <div class="product-color">
+            <h6>color:{{item.color}}</h6>
+          </div>
+          <div class="product-footer">
+            <div routerLink="/product-details/{{item.id}}">
+              <fa-icon [icon]="view"></fa-icon>
+              <a >view details</a>
+            </div>
+            <div>
+              <fa-icon [icon]="cart"></fa-icon>
+              <a >add to cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

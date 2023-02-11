@@ -1,0 +1,22 @@
+table{
+  text-align: left;
+  color: blueviolet;
+  border-collapse: collapse;
+}
+
+table td, table th{
+  border: 1px solid blueviolet;
+  padding: 10px;
+  min-width: 160px;
+}
+table td img{
+  width: 100px;
+  height: 100px;
+}
+.deleteimage{
+  color: red;
+  text-align: center;
+}
+.adjust-update-link{
+margin-left: 10px;
+}

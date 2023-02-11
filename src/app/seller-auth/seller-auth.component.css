@@ -1,0 +1,38 @@
+.signup h1{
+  text-align: center;
+  margin: 50px 0px;
+  text-transform: uppercase;
+  font-family: serif;
+}
+.signup form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.signup form input,.signup form button{
+  width: 70%;
+  padding: 5px;
+  height: 45px;
+  outline: none;
+}
+.signup form button{
+  background-color: orangered;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.logsign{
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.loginerror{
+  color: red;
+  text-transform: capitalize;
+  text-align: center;
+}

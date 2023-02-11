@@ -1,0 +1,65 @@
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav .logo{
+  cursor: pointer;
+}
+nav .links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .links h3{
+  cursor: pointer;
+  color: blueviolet;
+  text-transform: capitalize;
+}
+nav form{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+}
+nav form input{
+  padding: 5px;
+  border-radius: 15px 0px 0px 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  height: 40px;
+  flex: 1;
+}
+nav form button{
+  background-color: orangered;
+  padding: 5px;
+  border: none;
+  height: 40px;
+  color: white;
+  border-radius:0px 15px 15px 0px;
+}
+.suggested-search{
+  position: absolute;
+  top: 40px;
+  z-index: 10;
+  display: list-item !important;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  width: 300px;
+  left: 230px;
+}
+.suggested-search li {
+  padding:5px;
+  border: 1px solid #ddd;
+}
+.suggested-search li a{
+  cursor: pointer;
+  color: blueviolet;
+}
+ul{
+  list-style-type: none;
+}
